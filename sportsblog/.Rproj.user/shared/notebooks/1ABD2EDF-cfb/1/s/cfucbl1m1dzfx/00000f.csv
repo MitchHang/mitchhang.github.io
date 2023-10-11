@@ -1,0 +1,1 @@
+"0","filtered_logs <- logs |> filter(abs(Differential) <= 10)"

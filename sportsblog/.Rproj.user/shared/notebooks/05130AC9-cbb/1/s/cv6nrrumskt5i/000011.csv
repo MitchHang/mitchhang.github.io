@@ -1,0 +1,6 @@
+"0","powerfive_plus_one <- c(""SEC WBB"", ""Big Ten WBB"", ""Pac-12 WBB"", ""Big 12 WBB"", ""ACC WBB"", ""Big East WBB"")"
+"0","teamzscore |> "
+"0","  filter(Conference %in% powerfive_plus_one) |> "
+"0","  arrange(desc(TotalZscore)) |>"
+"0","  select(Team, TotalZscore)"
+"2","Adding missing grouping variables: `Conference`"

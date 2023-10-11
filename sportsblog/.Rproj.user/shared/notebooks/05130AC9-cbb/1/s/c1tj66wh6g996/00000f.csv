@@ -1,0 +1,4 @@
+"0","ggplot() + "
+"0","  geom_line(data=umd, aes(x=Date, y=TeamFGPCT), color=""red"") + "
+"0","  geom_line(data=ill, aes(x=Date, y=TeamFGPCT), color=""orange"") + "
+"0","  scale_y_continuous(limits = c(0, .70))"

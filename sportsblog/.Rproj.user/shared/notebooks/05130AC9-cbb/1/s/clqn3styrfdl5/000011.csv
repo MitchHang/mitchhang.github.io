@@ -1,0 +1,3 @@
+"0","umd <- logs |> filter(Team == ""Maryland"")"
+"0",""
+"0","ggplot() + geom_line(data=umd, aes(x=Date, y=TeamFGPCT))"

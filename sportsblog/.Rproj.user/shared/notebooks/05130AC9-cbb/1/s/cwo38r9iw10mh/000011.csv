@@ -1,0 +1,8 @@
+"0","logs |> "
+"0","  filter(Team == ""Michigan"" & Season == '2020-2021' | Team == ""Wisconsin"" & Season == '2019-2020' | Team == ""Michigan State"" & Season == '2018-2019' | Team == ""Michigan State"" & Season == '2017-2018' | Team == 'Illinois' & Season == '2021-2022' | Team == 'Purdue' & Season == '2022-2023') |> "
+"0","  summarise("
+"0","    meanNetRebounds = mean(NetRebounds),"
+"0","    meanTurnoverMargin = mean(TurnoverMargin),"
+"0","    meanTeamFGPCT = mean(TeamFGPCT),"
+"0","    meanOpponentFGPCT = mean(OpponentFGPCT)"
+"0","  )"

@@ -1,0 +1,14 @@
+"0","atp_matches_2022 <- read_csv(""https://raw.githubusercontent.com/JeffSackmann/tennis_atp/master/atp_matches_2022.csv"")"
+"2","Warning in for (i in seq_len(n)) { :"
+"2","
+ "
+"2"," closing unused connection 3 (https://raw.githubusercontent.com/JeffSackmann/tennis_atp/blob/master/atp_matches_2022.csv)
+"
+"2","[1mRows: [22m[34m2917[39m [1mColumns: [22m[34m49[39m"
+"2","[36m──[39m [1mColumn specification[22m [36m──────────────────────────────────────────────────────────────────────────────────────────[39m
+[1mDelimiter:[22m "",""
+[31mchr[39m (14): tourney_id, tourney_name, surface, tourney_level, winner_entry, winner_name, winner_hand, winner_ioc...
+[32mdbl[39m (35): draw_size, tourney_date, match_num, winner_id, winner_seed, winner_ht, winner_age, loser_id, loser_s..."
+"2","
+[36mℹ[39m Use `spec()` to retrieve the full column specification for this data.
+[36mℹ[39m Specify the column types or set `show_col_types = FALSE` to quiet this message."

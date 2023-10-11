@@ -1,0 +1,5 @@
+"0","teamzscore |> "
+"0","  filter(Conference == ""Big Ten WBB"") |> "
+"0","  arrange(desc(TotalZscore)) |>"
+"0","  select(Team, TotalZscore)"
+"2","Adding missing grouping variables: `Conference`"

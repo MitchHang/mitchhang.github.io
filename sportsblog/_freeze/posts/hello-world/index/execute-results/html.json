@@ -1,0 +1,14 @@
+{
+  "hash": "0451c7ec66b6a13a85be35ad3f1d17ba",
+  "result": {
+    "markdown": "---\ntitle: \"Hello World!\"\nauthor: \"Mitchell Hang\"\ndate: '2023-10-05'\nformat: \n  html:\n    code-fold: true\n---\n\n\nThis is a blog. The word \"blog\" rhymes with \"dog.\"\n\nWelcome to my blog, dog.\n\n\n::: {.cell}\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

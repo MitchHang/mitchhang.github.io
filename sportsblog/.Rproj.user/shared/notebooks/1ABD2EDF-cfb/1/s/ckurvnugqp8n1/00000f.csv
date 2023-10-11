@@ -1,0 +1,6 @@
+"0","logs <- logs |> mutate("
+"0","  Differential = TeamScore - OpponentScore,"
+"0","  NetPenalties = Penalties - DefPenalties,"
+"0","  NetFumbles = Fumbles - DefFumbles,"
+"0","  NetInterceptions = Interceptions - DefInterceptions,"
+"0","  TurnoverMargin = TotalTurnovers - DefTotalTurnovers)"

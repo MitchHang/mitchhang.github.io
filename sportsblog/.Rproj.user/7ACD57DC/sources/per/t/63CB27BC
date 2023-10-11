@@ -1,0 +1,27 @@
+{
+    "id": "63CB27BC",
+    "path": "~/GitHub/sportsblog/posts/hello-world/index.qmd",
+    "project_path": "posts/hello-world/index.qmd",
+    "type": "quarto_markdown",
+    "hash": "2139348313",
+    "contents": "",
+    "dirty": false,
+    "created": 1696993708516.0,
+    "source_on_save": false,
+    "relative_order": 6,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "0,0",
+        "scrollLine": "0",
+        "rmdVisualMode": "false"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1696535320,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1696535320,
+    "read_only": false,
+    "read_only_alternatives": []
+}

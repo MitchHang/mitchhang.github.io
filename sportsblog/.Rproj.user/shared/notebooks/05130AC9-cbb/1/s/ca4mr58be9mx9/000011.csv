@@ -1,0 +1,5 @@
+"0","residualmodel <- residualmodel |> filter(!is.na(FGPctMargin))"
+"0",""
+"0","residualmodel <- residualmodel |> mutate(predicted = predict(fit), residuals = residuals(fit))"
+"0",""
+"0","residualmodel |> filter(Conference == 'Big Ten') |> arrange(desc(residuals)) |> select(Date, Team, Opponent, W_L, differential, FGPctMargin, predicted, residuals)"

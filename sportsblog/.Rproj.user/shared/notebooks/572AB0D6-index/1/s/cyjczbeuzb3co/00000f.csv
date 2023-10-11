@@ -1,0 +1,3 @@
+"0","games <- read_csv(""https://dwillis.github.io/sportsdatafiles/logs23.csv"")"
+"2","Error in open.connection(3L, ""rb"") : HTTP error 404.
+"
