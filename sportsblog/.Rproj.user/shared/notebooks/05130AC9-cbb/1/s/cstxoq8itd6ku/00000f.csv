@@ -1,4 +1,0 @@
-"0","logs <- logs |> mutate("
-"0","  Differential = TeamScore - OpponentScore, "
-"0","  NetRebounds = TeamTotalRebounds - OpponentTotalRebounds,"
-"0","  TurnoverMargin = TeamTurnovers - OpponentTurnovers)"

@@ -1,4 +1,0 @@
-"0","logs |> "
-"0","     filter("
-"0","         Team == ""Maryland"" & Season == '2022-2023'"
-"0","     ) |> summarise(avg_score = mean(TeamScore), avg_opp = mean(OpponentScore))"

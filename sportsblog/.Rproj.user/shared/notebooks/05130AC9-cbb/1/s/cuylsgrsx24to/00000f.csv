@@ -1,8 +1,0 @@
-"0","average <- logs |> group_by(Date) |> summarise(mean_shooting=mean(TeamFGPCT))"
-"0",""
-"0","ggplot() + "
-"0","  geom_line(data=p5conf, aes(x=Date, y=TeamFGPCT, group=Team), color=""grey"") + "
-"0","  geom_line(data=umd, aes(x=Date, y=TeamFGPCT), color=""red"") + "
-"0","  geom_line(data=ill, aes(x=Date, y=TeamFGPCT), color=""orange"") + "
-"0","  geom_line(data=average, aes(x=Date, y=mean_shooting), color=""black"") + "
-"0","  scale_y_continuous(limits = c(0, .70))"

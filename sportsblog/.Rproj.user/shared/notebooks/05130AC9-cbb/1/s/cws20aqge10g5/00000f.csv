@@ -1,1 +1,0 @@
-"0","residualmodel <- logs |> mutate(differential = TeamScore - OpponentScore, FGPctMargin = TeamFGPCT - OpponentFGPCT)"

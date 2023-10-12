@@ -1,3 +1,0 @@
-"0","ill <- logs |> filter(Team == ""Illinois"")"
-"0",""
-"0","ggplot() + geom_line(data=umd, aes(x=Date, y=TeamFGPCT), color=""red"")"

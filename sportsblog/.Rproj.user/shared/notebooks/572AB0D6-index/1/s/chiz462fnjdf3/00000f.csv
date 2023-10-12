@@ -1,5 +1,0 @@
-"0","top10 <- attendance |>"
-"0","  arrange(desc(`2022`)) |> "
-"0","  top_n(10) |> "
-"0","  select(Institution, `2022`)"
-"2","Selecting by 2022"
