@@ -1,0 +1,148 @@
+---
+title: "Third and Six"
+author: "Mitchell Hang"
+date: '2023-10-17'
+format: 
+  html:
+    code-fold: true
+---
+
+```{r, output=FALSE}
+library(tidyverse)
+library(janitor)
+library(cfbfastR)
+library(scales)
+```
+
+# load the play-by-play data
+
+```{r}
+plays <- load_cfb_pbp(seasons = c(2019, 2020, 2021, 2022, 2023))
+```
+
+```{r}
+third_and_six <- plays |> filter(down == 3, distance == 6)
+```
+
+```{r}
+third_and_six_grouped <- third_and_six |>
+  group_by(play_type) |>
+  summarize(count = n()) |>
+  arrange(desc(count))
+
+third_and_six_grouped
+```
+
+The most frequent play type is a Pass Reception, with over 3,400 occurrences from 2019 to 2023.
+
+```{r}
+third_and_six_grouped |>
+  mutate(pct = (count/11655)*100)
+```
+When I added all occurrences for each type of play, I got 11,655. There were 2,359 rush/run plays from 2019 to 2023, and they accounted for about 20.24% of all types of plays during that same period.
+
+```{r}
+third_and_six_yards_gained <- third_and_six |>
+  select(play_type, yards_gained) |>
+  group_by(play_type) |>
+  summarize(yards_gained = sum(yards_gained))
+
+third_and_six_yards_gained
+```
+
+The total yards gained for rush/run plays from 2019 to 2023 is 13,286 yards, and since there were 2,359 rush/run plays, we get an average of about 5.632 yards gained per play.
+
+```{r}
+third_and_six_teams_2019 <- third_and_six |>
+  filter(play_type == "Rush", year == 2019) |> 
+  group_by(home) |>
+  summarize(rush_play_count = n()) |>
+  arrange(desc(rush_play_count))
+
+third_and_six_teams_2019
+```
+```{r}
+third_and_six_teams_2020 <- third_and_six |>
+  filter(play_type == "Rush", year == 2020) |> 
+  group_by(home) |>
+  summarize(rush_play_count = n()) |>
+  arrange(desc(rush_play_count))
+
+third_and_six_teams_2020
+```
+
+```{r}
+third_and_six_teams_2021 <- third_and_six |>
+  filter(play_type == "Rush", year == 2021) |> 
+  group_by(home) |>
+  summarize(rush_play_count = n()) |>
+  arrange(desc(rush_play_count))
+
+third_and_six_teams_2021
+```
+
+```{r}
+third_and_six_teams_2022 <- third_and_six |>
+  filter(play_type == "Rush", year == 2022) |> 
+  group_by(home) |>
+  summarize(rush_play_count = n()) |>
+  arrange(desc(rush_play_count))
+
+third_and_six_teams_2022
+```
+
+```{r}
+third_and_six_teams_2023 <- third_and_six |>
+  filter(play_type == "Rush", year == 2023) |> 
+  group_by(home) |>
+  summarize(rush_play_count = n()) |>
+  arrange(desc(rush_play_count))
+
+third_and_six_teams_2023
+```
+
+```{r}
+third_and_six_teams_total <- third_and_six |>
+  filter(play_type == "Rush") |> 
+  group_by(home) |>
+  summarize(rush_play_count = n()) |>
+  arrange(desc(rush_play_count))
+
+third_and_six_teams_total
+```
+
+The Navy had the most rush/run plays in 2019. There was a three-way tie in 2020 for NC State, the Navy and North Texas. Arkansas had the most rush/run plays in 2021. There was a four-way tie in 2022 for Florida, Georgia, Mercer, and South Dakota State. The Army had the most rush/run plays in 2023. From 2019 to 2023, the Navy had the most rush/run plays out of every team.
+
+# Maryland
+
+```{r}
+third_and_six_md_grouped <- third_and_six |>
+  filter(home == "Maryland") |> 
+  group_by(play_type) |>
+  summarize(count = n()) |>
+  arrange(desc(count))
+
+third_and_six_md_grouped
+```
+
+```{r}
+third_and_six_md_grouped |>
+  mutate(pct = (count/72)*100)
+```
+
+Maryland had ten types of plays from 2019 to 2023, with the most frequent of them being Pass Receptions, accounting for about 34.722% of all plays. This was surprising to me, as this is one of three play types that Maryland seems to be focusing on during football, whereas the other seven listed have less than 10 occurrences from 2019 to 2023. This makes me think that because Maryland focuses on the pass receptions, rushes/runs and pass incompletions, they would often do well in games, but because they aren't focusing on anything else, they would come up less than stellar in games. So it's honestly a bit of a mixed bag here. 
+
+```{r}
+ggplot() + 
+  geom_bar(
+    data=third_and_six_md_grouped, 
+    aes(x=reorder(play_type, count),
+        weight=count)) + 
+  scale_y_continuous(labels=comma) + 
+  labs(
+    title="Maryland's dominant play from 2019 to 2023 is pass receptions", 
+    x="Type of play", 
+    y="Count (from 2019 to 2023") + 
+  theme_minimal() + 
+  coord_flip()
+```
